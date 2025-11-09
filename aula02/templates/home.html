@@ -8,5 +8,12 @@
 <body>
     <h1>Bem-vindo!</h1>
     <p>Esta é a página principal da nossa aplicação e está sendo renderizada pela função <strong>render_template </strong>do <strong>Flask</strong></p>
+    <p>Segundo o meu <strong>Banco de Dados</strong> seu nome é: <strong>{{ nome }}</strong>, correto?</p>
+    <p>E suas <strong>Linguagens de programação</strong> favoritas são:
+    <ul>
+        {% for linguagem in linguagens %}
+            <li>{{ linguagem}} <br></li>
+        {% endfor %}
+    </ul></p>
 </body>
 </html>
