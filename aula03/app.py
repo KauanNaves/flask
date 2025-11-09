@@ -14,7 +14,7 @@ def form():
 
 # Definindo a rota PUT do formulário
 app.route('/dadosform', methods=["POST"])
-def dados_form():
+def dadosform():
     nome = request.form['input-nome']
     return render_template('resultado.html', nome=nome)
 
