@@ -13,10 +13,19 @@ def form():
     return render_template('form.html')
 
 # Definindo a rota PUT do formulário
-app.route('/dadosform', methods=["POST"])
-def dadosform():
+@app.route('/resultado', methods=['POST'])
+def resultado():
     nome = request.form['input-nome']
     return render_template('resultado.html', nome=nome)
+
+# @app.route('/resultado')
+# def resultado():
+#     return render_template('resultado.html')
+
+
+
+
+
 
 
 
