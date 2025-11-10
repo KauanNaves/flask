@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>  
+        {% if excluir %}
+        <h1>Jogador excluído com sucesso!</h1>
+        {% elif editar %}
+        <h1>Jogador editado com sucesso!</h1>
+        {% else %}
+        <h1>Jogador adicionado com sucesso!</h1>
+        {% endif %}
+</section>
+{% endblock %} 

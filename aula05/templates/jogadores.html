@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>  
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Posição</th>
+                <th>Idade</th>
+                <th>Time</th>
+            </tr>
+            {% if jogadores %}
+            {% for jogador in jogadores %}
+            <tr>
+                <td>{{ jogador.nome }}</td>
+                <td>{{ jogador.posicao }}</td>
+                <td>{{ jogador.idade }}</td>
+                <td>{{ jogador.time }}</td>
+                <td> <button><a href="/jogadores/editar-jogador/{{ jogador.id }}">Editar</a></button></td>
+                <td> <form method="post" action='/jogadores/excluir-jogador/{{jogador.id}}'><button type="submit">Excluir</button></form></td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <tr>
+                <td colspan="3">Nenhum jogador cadastrado.</td>
+            </tr>
+            {% endif %}
+        </table>
+        <button><a href="/jogadores/adicionar-jogador">Adicionar Jogador</a></button>
+</section>
+{% endblock %} 
