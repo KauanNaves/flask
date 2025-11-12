@@ -1,0 +1,28 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imob-Gestor</title>
+    <link rel="stylesheet" href="url_for('static', 'login.css')">
+</head>
+<body>
+    <header>
+        <h1>IMOB GESTOR</h1>
+        <img src="#" alt="Logo ImobGestor">
+    </header>
+    <main>
+        <h2>Sign in</h2>
+        <form action="/auth/register" method="post">
+            <input placeholder="Email" type="email" name="email-user-login" id="email-user" required>
+            <input placeholder="Password" type="password" name="password-user-login" id="password-user" required>
+            <a href="/auth/forgot">Forgot password?</a>
+            <button>Sign in</button>
+        </form>
+        <p>Or create your account <a href="/auth/register">Sing Up</a></p>
+    </main>
+    <footer>
+        <p>© 2025 Imob Gestor -- Created by <a href="https://github.com/KauanNaves">Kauan Naves</a></p>
+    </footer>
+</body>
+</html>
