@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
     <title>Imob-Gestor</title>
 </head>
 <body>
@@ -10,7 +11,9 @@
         <h1>Imob-Gestor</h1>
         <nav>
             <ul>
-                
+                <li>Properties</li>
+                <li>Home</li>
+                <li>Logout</li>
             </ul>
         </nav>
     </header>
@@ -19,7 +22,7 @@
         {% endblock %}
     </main>
     <footer>
-
+        <p>© 2025 Imob Gestor -- Created by <a target="_blank" href="https://github.com/KauanNaves">Kauan Naves</a></p>
     </footer>
 </body>
 </html>

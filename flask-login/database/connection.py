@@ -150,6 +150,19 @@ def create_table_properties():
     close_connection(conn)
 
 
+def get_user_by_email(email):
+    conn = create_connection()
+    cursor = create_cursor(conn)
+    if cursor:
+        cursor.execute('''
+                SELECT * FROM users
+                WHERE email = ?
+                       ''', (email,))
+        result = cursor.fetchone()
+    close_connection(conn)
+    return result if result else None
+
+
 def close_connection(conn):
     if conn:
         conn.close()

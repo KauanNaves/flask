@@ -6,6 +6,6 @@ main_routes = Blueprint('main', __name__)
 def index():
     return redirect('auth/register')
 
-main_routes.route('/about')
+@main_routes.route('/about')
 def about():
     return render_template('about.html')

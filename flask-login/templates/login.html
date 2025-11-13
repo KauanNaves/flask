@@ -13,16 +13,25 @@
     </header>
     <main>
         <h2>Sign in</h2>
-        <form action="/auth/register" method="post">
+        <form action="/auth/login" method="post">
             <input placeholder="Email" type="email" name="email-user-login" id="email-user" required>
             <input placeholder="Password" type="password" name="password-user-login" id="password-user" required>
             <a href="/auth/forgot">Forgot password?</a>
             <button>Sign in</button>
         </form>
         <p>Or create your account <a href="/auth/register">Sing Up</a></p>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
     </main>
     <footer>
-        <p>© 2025 Imob Gestor -- Created by <a href="https://github.com/KauanNaves">Kauan Naves</a></p>
+        <p>© 2025 Imob Gestor -- Created by <a target="_blank" href="https://github.com/KauanNaves">Kauan Naves</a></p>
     </footer>
 </body>
 </html>

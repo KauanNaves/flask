@@ -20,9 +20,18 @@
             <button>Sign up</button>
         </form>
         <p>Already have an account? <a href="/auth/login">Log in</a></p>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
     </main>
     <footer>
-        <p>© 2025 Imob Gestor -- Created by <a href="https://github.com/KauanNaves">Kauan Naves</a></p>
+        <p>© 2025 Imob Gestor -- Created by <a target="_blank" href="https://github.com/KauanNaves">Kauan Naves</a></p>
     </footer>
 </body>
 </html>
